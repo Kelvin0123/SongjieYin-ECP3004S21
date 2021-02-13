@@ -1,0 +1,85 @@
+#--------------------------------------------------
+Testing my Examples for Exercise 1.
+#--------------------------------------------------
+Exercise 1, Example 1:
+Evaluating average(10,20)
+Expected: 15.0
+Got: 15.0
+#--------------------------------------------------
+Exercise 1, Example 2:
+Evaluating average(2.5, 3.0)
+Expected: 2.75
+Got: 2.75
+#--------------------------------------------------
+Exercise 1, Example 3:
+Evaluating average(50.25, 8)
+Expected: 29.125
+Got: 29.125
+#--------------------------------------------------
+Testing my Examples for Exercise 2.
+#--------------------------------------------------
+Exercise 2, Example 1:
+Evaluating area_of_circle(5)
+Expected: 78.53981633974483
+Got: 78.53981633974483
+#--------------------------------------------------
+Exercise 2, Example 2:
+Evaluating area_of_circle(10.5)
+Expected: 346.3605900582747
+Got: 346.3605900582747
+#--------------------------------------------------
+Exercise 2, Example 3:
+Evaluating area_of_circle(50.8)
+Expected: 8107.319665559963
+Got: 8107.319665559963
+#--------------------------------------------------
+Testing my Examples for Exercise 3.
+#--------------------------------------------------
+Exercise 3, Example 1:
+Evaluating volume_of_cylinder(10,3)
+Expected: 942.4777960769379
+Got: 942.4777960769379
+#--------------------------------------------------
+Exercise 3, Example 2:
+Evaluating volume_of_cylinder(5.5,46)
+Expected: 4371.526177470197
+Got: 4371.526177470197
+#--------------------------------------------------
+Exercise 3, Example 3:
+Evaluating volume_of_cylinder(0,3)
+Expected: 0.0
+Got: 0.0
+#--------------------------------------------------
+Testing my Examples for Exercise 4.
+#--------------------------------------------------
+Exercise 4, Example 1:
+Evaluating utility(10,5,3)
+Expected: 40.0
+Got: 40.0
+#--------------------------------------------------
+Exercise 4, Example 2:
+Evaluating utility(8.2,6,8)
+Expected: 73.02172134541375
+Got: 73.02172134541375
+#--------------------------------------------------
+Exercise 4, Example 3:
+Evaluating utility(2,3,5)
+Expected: 0.3950617283950617
+Got: 0.3950617283950617
+#--------------------------------------------------
+Testing my Examples for Exercise 5.
+#--------------------------------------------------
+Exercise 5, Example 1:
+Evaluating logit(16.3,8.6,9.24)
+Expected: 1.0
+Got: 1.0
+#--------------------------------------------------
+Exercise 5, Example 2:
+Evaluating logit(0,6,7)
+Expected: 0.9975273768433652
+Got: 0.9975273768433652
+#--------------------------------------------------
+Exercise 5, Example 3:
+Evaluating logit(2.3,0,4.5)
+Expected: 0.9999680082337281
+Got: 0.9999680082337281
