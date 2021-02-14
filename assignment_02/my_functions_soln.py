@@ -24,7 +24,9 @@
 # import name_of_module
 import math
 
+import doctest
 
+doctest.testmod()
 ##################################################
 # Function Definitions
 ##################################################
