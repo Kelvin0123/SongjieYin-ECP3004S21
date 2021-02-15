@@ -24,8 +24,6 @@
 import math
 import doctest
 
-doctest.testmod()
-
 ##################################################
 # Function Definitions
 ##################################################
@@ -80,9 +78,9 @@ def utility_positive(x: float, y: float, alpha: float) -> float:
     >>> utility_positive(1.0,1.0,0.7)
     1.0
     >>> utility_positive(-4,-8,-2)
-    None
+    Please input positive numbers for all.
     >>> utility_positive(5,2,-8)
-    None
+    Please input a positive number for alpha.
     """
     utility=(x**alpha)*(y**(1-alpha))
     
@@ -103,8 +101,6 @@ def utility_positive(x: float, y: float, alpha: float) -> float:
             return print('Please input a positive number for alpha.')
         return utility
     
-str('Please input a positive number for all.')
-
 # Exercise 4
 
 def logit_like(yi: float,xi: float,beta_0: float,beta_1: float) -> float:
@@ -132,6 +128,7 @@ def logit_like(yi: float,xi: float,beta_0: float,beta_1: float) -> float:
 # Run the examples to test these functions
 ##################################################
 
+doctest.testmod()
 
 # Test the examples and print the results. 
 
