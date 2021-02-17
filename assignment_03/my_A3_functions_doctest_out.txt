@@ -1,0 +1,119 @@
+#--------------------------------------------------
+# Importing function definitions
+# Doctest for script my_A3_functions.py:
+#--------------------------------------------------
+**********************************************************************
+File "assignment_03/my_A3_functions_doctest.py", line ?, in __main__.logit_like
+Failed example:
+    logit_like(1,0.0, math.log(2),2.0)
+Expected:
+    2.0/3.0
+Got:
+    0.6666666666666666
+**********************************************************************
+File "assignment_03/my_A3_functions_doctest.py", line ?, in __main__.quad_roots_real
+Failed example:
+    quad_roots_real(1,1,1,1)
+Expected:
+    None
+Got nothing
+**********************************************************************
+2 items had failures:
+   1 of   3 in __main__.logit_like
+   1 of   3 in __main__.quad_roots_real
+***Test Failed*** 2 failures.
+#--------------------------------------------------
+Testing my Examples for Exercise 1.
+#--------------------------------------------------
+Exercise 1, Example 1:
+Evaluating quad_roots_1(3,1,7,12)
+Expected: [-3.0, -4.0]
+Got: [-3.0, -4.0]
+#--------------------------------------------------
+Exercise 1, Example 2:
+Evaluating quad_roots_1(-5,1,2,-35)
+Expected: [5.0, -7.0]
+Got: [5.0, -7.0]
+#--------------------------------------------------
+Exercise 1, Example 3:
+Evaluating quad_roots_1(1.5,1,-5.5,6)
+Expected: [4.0, 1.5]
+Got: [4.0, 1.5]
+#--------------------------------------------------
+Testing my Examples for Exercise 2.
+#--------------------------------------------------
+Exercise 2, Example 1:
+Evaluating quad_roots_real(-3,1,7,12)
+Expected: [-3.0, -4.0]
+Got: [-3.0, -4.0]
+#--------------------------------------------------
+Exercise 2, Example 2:
+Evaluating quad_roots_real(1,1,1,1)
+Expected: None
+Got: None
+#--------------------------------------------------
+Exercise 2, Example 3:
+Evaluating quad_roots_real(-5,1,2,-35)
+Expected: [5.0, -7.0]
+Got: [5.0, -7.0]
+#--------------------------------------------------
+Testing my Examples for Exercise 3.
+#--------------------------------------------------
+Exercise 3, Example 1:
+Evaluating utility_positive(1.0,1.0,0.7)
+Expected: 1.0
+Got: 1.0
+#--------------------------------------------------
+Exercise 3, Example 2:
+Evaluating utility_positive(-4,-8,-2)
+Expected: None
+Please input positive numbers for all.
+Got: None
+#--------------------------------------------------
+Exercise 3, Example 3:
+Evaluating utility_positive(5,2,-8)
+Expected: None
+Please input a positive number for alpha.
+Got: None
+#--------------------------------------------------
+Testing my Examples for Exercise 4.
+#--------------------------------------------------
+Exercise 4, Example 1:
+Evaluating logit_like(1.0,0.0,0.0,0.0)
+Expected: 0.5
+Got: 0.5
+#--------------------------------------------------
+Exercise 4, Example 2:
+Evaluating logit_like(0.0,0.0,0.0,0.0)
+Expected: 0.5
+Got: 0.5
+#--------------------------------------------------
+Exercise 4, Example 3:
+Evaluating logit_like(1,0.0, math.log(2), 2.0)
+Expected: 0.6666666666666666
+Got: 0.6666666666666666
+#--------------------------------------------------
+# Testing with doctest module
+#--------------------------------------------------
+**********************************************************************
+File "assignment_03/my_A3_functions_doctest.py", line ?, in __main__.logit_like
+Failed example:
+    logit_like(1,0.0, math.log(2),2.0)
+Expected:
+    2.0/3.0
+Got:
+    0.6666666666666666
+**********************************************************************
+File "assignment_03/my_A3_functions_doctest.py", line ?, in __main__.quad_roots_real
+Failed example:
+    quad_roots_real(1,1,1,1)
+Expected:
+    None
+Got nothing
+**********************************************************************
+2 items had failures:
+   1 of   3 in __main__.logit_like
+   1 of   3 in __main__.quad_roots_real
+***Test Failed*** 2 failures.
+TestResults(failed=2, attempted=12)
+#--------------------------------------------------
