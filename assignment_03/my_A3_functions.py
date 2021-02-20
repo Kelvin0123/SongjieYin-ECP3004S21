@@ -63,10 +63,11 @@ def quad_roots_real(x: float, a: float, b: float, c: float) -> float:
     d = (b**2) - (4*a*c) 
     if d<0:
         return None
-    x_1 = (-b+math.sqrt(d))/(2*a)
-    x_2 = (-b-math.sqrt(d))/(2*a)
-        
-    return [x_1,x_2]
+    else:
+        x_1 = (-b+math.sqrt(d))/(2*a)
+        x_2 = (-b-math.sqrt(d))/(2*a)
+            
+        return [x_1,x_2]
 
 # Exercise 3
 
@@ -84,21 +85,25 @@ def utility_positive(x: float, y: float, alpha: float) -> float:
     """
     utility=(x**alpha)*(y**(1-alpha))
     
-    if x or y or alpha<0:
+    if x<0 or y<0 or alpha<0 or alpha>1:
         if x<0 and y<0 and alpha<0:
            return print ('Please input positive numbers for all.')
-        elif y<0 and alpha<0:
+        if y<0 and alpha<0:
            return print ('Please input positive numbers for y and alpha.')
-        elif x<0 and alpha<0:
+        if x<0 and alpha<0:
             return print ('Please input positive numbers for x and alpha.')
-        elif x<0 and y<0:
+        if x<0 and y<0:
             return print ('Please input positive numbers for x and y.')
-        elif x<0:
+        if x<0:
             return print('Please input a positive number for x.')
-        elif y<0:
+        if y<0:
             return print('Please input a positive number for y.')
-        elif alpha<0:
+        if alpha<0:
             return print('Please input a positive number for alpha.')
+        if alpha>1:
+            return print('Please input a positive number for alpha.')
+        return None
+    else:
         return utility
     
 # Exercise 4
@@ -117,9 +122,11 @@ def logit_like(yi: float,xi: float,beta_0: float,beta_1: float) -> float:
     link=(math.e**(beta_0+xi*beta_1))/(1+math.e**(beta_0+xi*beta_1))
     
     if yi == 1:
-        return link
-    if yi == 0:
-        return 1-link
+        return math.log(link)
+    elif yi == 0:
+        return math.log(1-link)
+    else:
+        None
 
 # Only function definitions above this point. 
 
