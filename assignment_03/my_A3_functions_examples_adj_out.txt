@@ -3,13 +3,29 @@
 # Examples within script my_A3_functions.py:
 #--------------------------------------------------
 **********************************************************************
-File "assignment_03/my_A3_functions_examples.py", line 113, in __main__.logit_like
+File "assignment_03/my_A3_functions_examples.py", line 117, in __main__.logit_like
+Failed example:
+    logit_like(1.0,0.0,0.0,0.0)
+Expected:
+    0.5
+Got:
+    -0.6931471805599453
+**********************************************************************
+File "assignment_03/my_A3_functions_examples.py", line 119, in __main__.logit_like
+Failed example:
+    logit_like(0.0,0.0,0.0,0.0)
+Expected:
+    0.5
+Got:
+    -0.6931471805599453
+**********************************************************************
+File "assignment_03/my_A3_functions_examples.py", line 121, in __main__.logit_like
 Failed example:
     logit_like(1,0.0, math.log(2),2.0)
 Expected:
     2.0/3.0
 Got:
-    0.6666666666666666
+    -0.40546510810816444
 **********************************************************************
 File "assignment_03/my_A3_functions_examples.py", line 92, in __main__.quad_roots_real
 Failed example:
@@ -19,9 +35,9 @@ Expected:
 Got nothing
 **********************************************************************
 2 items had failures:
-   1 of   3 in __main__.logit_like
+   3 of   3 in __main__.logit_like
    1 of   3 in __main__.quad_roots_real
-***Test Failed*** 2 failures.
+***Test Failed*** 4 failures.
 #--------------------------------------------------
 Testing my Examples for Exercise 1.
 #--------------------------------------------------
@@ -81,17 +97,17 @@ Testing my Examples for Exercise 4.
 Exercise 4, Example 1:
 Evaluating logit_like(1.0,0.0,0.0,0.0)
 Expected: 0.5
-Got: 0.5
+Got: -0.6931471805599453
 #--------------------------------------------------
 Exercise 4, Example 2:
 Evaluating logit_like(0.0,0.0,0.0,0.0)
 Expected: 0.5
-Got: 0.5
+Got: -0.6931471805599453
 #--------------------------------------------------
 Exercise 4, Example 3:
 Evaluating logit_like(1,0.0, math.log(2), 2.0)
 Expected: 0.6666666666666666
-Got: 0.6666666666666666
+Got: -0.40546510810816444
 #--------------------------------------------------
 # Testing with examples in solutions
 #--------------------------------------------------
@@ -137,7 +153,7 @@ Error in quad_roots_real(0, 0, 0)
 ERROR:root:Traceback (most recent call last):
   File "assignment_03/my_A3_functions_examples.py", line 194, in <module>
     print("Got: " + str(quad_roots_real(0, 0, 0, 0)))
-  File "<string>", line 66, in quad_roots_real
+  File "<string>", line 67, in quad_roots_real
 ZeroDivisionError: float division by zero
 
 #--------------------------------------------------
@@ -148,7 +164,7 @@ Error in quad_roots_real(0, 0, 7.0)
 ERROR:root:Traceback (most recent call last):
   File "assignment_03/my_A3_functions_examples.py", line 207, in <module>
     print("Got: " + str(quad_roots_real(0, 0, 0, 7.0)))
-  File "<string>", line 66, in quad_roots_real
+  File "<string>", line 67, in quad_roots_real
 ZeroDivisionError: float division by zero
 
 #--------------------------------------------------
@@ -159,7 +175,7 @@ Error in quad_roots_real(0, 4.0, 2.0)
 ERROR:root:Traceback (most recent call last):
   File "assignment_03/my_A3_functions_examples.py", line 220, in <module>
     print("Got: " + str(quad_roots_real(0, 0, 4.0, 2.0)))
-  File "<string>", line 66, in quad_roots_real
+  File "<string>", line 67, in quad_roots_real
 ZeroDivisionError: float division by zero
 
 #--------------------------------------------------
@@ -206,24 +222,25 @@ Got: None
 Exercise 3, Example 7:
 Evaluating utility_positive(1.0, 1.0, 1.5)
 Expected: None
-Got: 1.0
+Please input a positive number for alpha.
+Got: None
 #--------------------------------------------------
 Testing my Examples for Exercise 4.
 #--------------------------------------------------
 Exercise 4, Example 1:
 Evaluating logit_like(1, 13.7, 0.0, 0.0)
 Expected: -0.6931471805599453
-Got: 0.5
+Got: -0.6931471805599453
 #--------------------------------------------------
 Exercise 4, Example 2:
 Evaluating logit_like(0, 0.0, math.log(2), 2.0)
 Expected: -1.0986122886681098
-Got: 0.33333333333333337
+Got: -1.0986122886681096
 #--------------------------------------------------
 Exercise 4, Example 3:
 Evaluating logit_like(1, 1.0, 0.0, math.log(5))
 Expected: -0.1823215567939546
-Got: 0.8333333333333333
+Got: -0.1823215567939547
 #--------------------------------------------------
 Exercise 4, Example 4:
 Evaluating logit_like(7, 1.0, 0.0, math.log(5))
