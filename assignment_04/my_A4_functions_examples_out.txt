@@ -1,0 +1,240 @@
+#--------------------------------------------------
+# Importing function definitions
+# Doctest for script my_A4_functions.py:
+#--------------------------------------------------
+**********************************************************************
+File "assignment_04/my_A4_functions_examples.py", line 112, in __main__.logit_like_sum
+Failed example:
+    logit_like_sum([1,3], [1.0,12], 0.0, math.log(5))
+Expected:
+    None
+Got:
+    Warning: y is not binary. y should be either 1 or 0.
+**********************************************************************
+File "assignment_04/my_A4_functions_examples.py", line 51, in __main__.matrix_multiple
+Failed example:
+    matrix_multiple(numpy.array([[3.,6.],[4.,7.]]),numpy.array([[1.,2.,3.]]))
+Expected:
+    None
+Got:
+    Please input the correct matrices so that the column of mat_1 equals the row of mat_2
+**********************************************************************
+File "assignment_04/my_A4_functions_examples.py", line 98, in __main__.ssr_loops
+Failed example:
+    ssr_loops([2],[3,4],5,6)
+Expected:
+    None
+Got nothing
+**********************************************************************
+File "assignment_04/my_A4_functions_examples.py", line 98, in __main__.ssr_vec
+Failed example:
+    ssr_vec(numpy.array([[2]]),numpy.array([[3,4]]),5,6)
+Expected:
+    None
+Got nothing
+**********************************************************************
+4 items had failures:
+   1 of   3 in __main__.logit_like_sum
+   1 of   3 in __main__.matrix_multiple
+   1 of   3 in __main__.ssr_loops
+   1 of   3 in __main__.ssr_vec
+***Test Failed*** 4 failures.
+#--------------------------------------------------
+# Testing with examples in solutions
+#--------------------------------------------------
+#--------------------------------------------------
+Testing my Examples for Exercise 1.
+#--------------------------------------------------
+Note that it is extra cautious to
+send numpy arrays in the correct shape,
+in case the function is sensitive to the specification.
+I test with both arrays and lists, so that
+it might work for either specification.
+#--------------------------------------------------
+Exercise 1, Example 1:
+Evaluating matrix_multiply(np.array([[1., 2.], [3., 4.]]), np.array([1., 1.]).reshape(2,1))
+Expected: array([[3.],[7.]])
+Got: 
+
+Error inmatrix_multiply(np.array([[1., 2.], [3., 4.]]), np.array([1., 1.]).reshape(2,1))
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 98, in <module>
+    matrix_multiply(np.array([[1., 2.], [3., 4.]]), np.array([1., 1.]).reshape(2,1))
+NameError: name 'matrix_multiply' is not defined
+
+#--------------------------------------------------
+Exercise 1, Example 1:
+Evaluating matrix_multiply([[1., 2.], [3., 4.]], [[1.], [1.]])
+Expected: array([[3.],[7.]])
+Got: 
+
+Error inmatrix_multiply([[1., 2.], [3., 4.]], [[1.], [1.]])
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 113, in <module>
+    matrix_multiply([[1., 2.], [3., 4.]], [[1.], [1.]])
+NameError: name 'matrix_multiply' is not defined
+
+#--------------------------------------------------
+Exercise 1, Example 2:
+Evaluating matrix_multiply(list(range(4)), [[5.],[5.],[5.],[5.]])
+Expected: array([[30.]])
+Got: 
+
+Error inmatrix_multiply(list(range(4)), [[5.],[5.],[5.],[5.]])
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 129, in <module>
+    matrix_multiply(list(range(4)), [[5.],[5.],[5.],[5.]])
+NameError: name 'matrix_multiply' is not defined
+
+#--------------------------------------------------
+Exercise 1, Example 3:
+Evaluating matrix_multiply(np.array([[1], [2]]), np.array([[3, 4]]))
+Expected: array([[3., 4.],[6., 8.]])
+Got: 
+
+Error inmatrix_multiply(np.array([[1], [2]]), np.array([[3, 4]]))
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 145, in <module>
+    matrix_multiply(np.array([[1], [2]]), np.array([[3, 4]]))
+NameError: name 'matrix_multiply' is not defined
+
+#--------------------------------------------------
+Exercise 1, Example 3:
+Evaluating matrix_multiply([[1], [2]], [[3, 4]])
+Expected: array([[3., 4.],[6., 8.]])
+Got: 
+
+Error inmatrix_multiply([[1], [2]], [[3, 4]])
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 161, in <module>
+    matrix_multiply([[1], [2]], [[3, 4]])
+NameError: name 'matrix_multiply' is not defined
+
+#--------------------------------------------------
+Exercise 1, Example 4:
+Evaluating matrix_multiply(np.array([[1., 2.], [3., 4.]]), np.array([[3, 4]]))
+Expected: Error: Matrices are not conformable...
+Got: 
+
+Error inmatrix_multiply(np.array([[1., 2.], [3., 4.]]), np.array([[3, 4]]))
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 181, in <module>
+    matrix_multiply(np.array([[1., 2.], [3., 4.]]), np.array([[3, 4]]))
+NameError: name 'matrix_multiply' is not defined
+
+#--------------------------------------------------
+Testing my Examples for Exercise 2.
+#--------------------------------------------------
+Notice that the examples are simple sums of integers
+and one corner case evaluates to zero.
+#--------------------------------------------------
+Exercise 2, Example 1:
+Evaluating ssr_loops([2, 2, 2], [1, 1, 1], 0.5, 0.5)
+Expected: 3.0
+Got: 
+
+3.0
+#--------------------------------------------------
+Exercise 2, Example 2:
+Evaluating ssr_loops([3, 0, 3], [0, 2, 2], 1.0, 0.5)
+Expected: 9.0
+Got: 
+
+9.0
+#--------------------------------------------------
+Exercise 2, Example 3:
+Evaluating ssr_loops([2, 3, 4], [1, 2, 3], 1.0, 1.0)
+Expected: 0.0
+Got: 
+
+0.0
+#--------------------------------------------------
+Testing my Examples for Exercise 3.
+#--------------------------------------------------
+Notice that these are the same examples
+as for ssr_loops because the function
+performs the same calculations.
+#--------------------------------------------------
+Exercise 3, Example 1:
+Evaluating ssr_vec(np.array([2, 2, 2]), np.array([1, 1, 1]), 0.5, 0.5)
+Expected: 3.0
+Got: 
+
+Error inssr_vec(np.array([2, 2, 2]), np.array([1, 1, 1]), 0.5, 0.5)
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 264, in <module>
+    ssr_vec(np.array([2, 2, 2]), np.array([1, 1, 1]), 0.5, 0.5)
+  File "<string>", line 97, in ssr_vec
+TypeError: object of type 'numpy.int32' has no len()
+
+#--------------------------------------------------
+Exercise 3, Example 2:
+Evaluating ssr_vec(np.array([3, 0, 3]), np.array([0, 2, 2]), 1.0, 0.5)
+Expected: 9.0
+Got: 
+
+Error inssr_vec(np.array([3, 0, 3]), np.array([0, 2, 2]), 1.0, 0.5)
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 279, in <module>
+    ssr_vec(np.array([3, 0, 3]), np.array([0, 2, 2]), 1.0, 0.5)
+  File "<string>", line 97, in ssr_vec
+TypeError: object of type 'numpy.int32' has no len()
+
+#--------------------------------------------------
+Exercise 3, Example 3:
+Evaluating ssr_vec(np.array([2, 3, 4]), np.array([1, 2, 3]), 1.0, 1.0)
+Expected: 0.0
+Got: 
+
+Error inssr_vec(np.array([2, 3, 4]), np.array([1, 2, 3]), 1.0, 1.0)
+ERROR:root:Traceback (most recent call last):
+  File "assignment_04/my_A4_functions_examples.py", line 294, in <module>
+    ssr_vec(np.array([2, 3, 4]), np.array([1, 2, 3]), 1.0, 1.0)
+  File "<string>", line 97, in ssr_vec
+TypeError: object of type 'numpy.int32' has no len()
+
+#--------------------------------------------------
+Testing my Examples for Exercise 4.
+#--------------------------------------------------
+Notice that the first simple example is the same
+as one from Assignment 3.
+These should still work with only one observation.
+#--------------------------------------------------
+Exercise 4, Example 1:
+Evaluating logit_like_sum([1], [13.7], 0.0, 0.0)
+Expected: -0.6931471805599453
+Got: 
+
+-0.6931471805599453
+#--------------------------------------------------
+Exercise 4, Example 2:
+Evaluating logit_like_sum([1, 1, 1], [13.7, 12, 437], 0.0, 0.0)
+Expected: -2.0794415416798357
+Got: 
+
+-2.0794415416798357
+#--------------------------------------------------
+Exercise 4, Example 3:
+Evaluating logit_like_sum([1, 0], [1, 1], 0.0, math.log(2))
+Expected: -1.504077396776274
+Got: 
+
+-1.504077396776274
+#--------------------------------------------------
+Exercise 4, Example 4:
+Evaluating logit_like_sum([1, 0], [2, 3], math.log(5), math.log(2))
+Expected: -3.762362230873739
+Got: 
+
+-3.762362230873739
+#--------------------------------------------------
+Testing the corner case with non-binary y.
+#--------------------------------------------------
+Exercise 4, Example 5:
+Evaluating logit_like_sum([1, 7], [2, 3], math.log(5), math.log(2))
+Expected: Error: Observations in y must be either zero or one.
+Got: 
+
+Warning: y is not binary. y should be either 1 or 0.
+None
+#--------------------------------------------------
