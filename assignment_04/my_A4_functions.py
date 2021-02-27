@@ -94,7 +94,7 @@ def ssr_vec(y: list,x: list,beta_0: float,beta_1: float) -> float:
     >>> ssr_vec(numpy.array([[2]]),numpy.array([[3,4]]),5,6)
     None
     """
-    if len(x[0]) != len(y[0]):
+    if len(x) != len(y):
         return None
     else:
         ssr = ((y-beta_0-beta_1*x)**2) 

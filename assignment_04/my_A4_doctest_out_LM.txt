@@ -1,0 +1,83 @@
+#--------------------------------------------------
+# Importing function definitions
+# Doctest for script my_A4_functions.py:
+#--------------------------------------------------
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.logit_like_sum
+Failed example:
+    logit_like_sum([1,3], [1.0,12], 0.0, math.log(5))
+Expected:
+    None
+Got:
+    Warning: y is not binary. y should be either 1 or 0.
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.matrix_multiple
+Failed example:
+    matrix_multiple(numpy.array([[3.,6.],[4.,7.]]),numpy.array([[1.,2.,3.]]))
+Expected:
+    None
+Got:
+    Please input the correct matrices so that the column of mat_1 equals the row of mat_2
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.ssr_loops
+Failed example:
+    ssr_loops([2],[3,4],5,6)
+Expected:
+    None
+Got nothing
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.ssr_vec
+Failed example:
+    ssr_vec(numpy.array([[2]]),numpy.array([[3,4]]),5,6)
+Expected:
+    None
+Got nothing
+**********************************************************************
+4 items had failures:
+   1 of   3 in __main__.logit_like_sum
+   1 of   3 in __main__.matrix_multiple
+   1 of   3 in __main__.ssr_loops
+   1 of   3 in __main__.ssr_vec
+***Test Failed*** 4 failures.
+#--------------------------------------------------
+# Testing with doctest module
+#--------------------------------------------------
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.logit_like_sum
+Failed example:
+    logit_like_sum([1,3], [1.0,12], 0.0, math.log(5))
+Expected:
+    None
+Got:
+    Warning: y is not binary. y should be either 1 or 0.
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.matrix_multiple
+Failed example:
+    matrix_multiple(numpy.array([[3.,6.],[4.,7.]]),numpy.array([[1.,2.,3.]]))
+Expected:
+    None
+Got:
+    Please input the correct matrices so that the column of mat_1 equals the row of mat_2
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.ssr_loops
+Failed example:
+    ssr_loops([2],[3,4],5,6)
+Expected:
+    None
+Got nothing
+**********************************************************************
+File "assignment_04/my_A4_functions_doctest.py", line ?, in __main__.ssr_vec
+Failed example:
+    ssr_vec(numpy.array([[2]]),numpy.array([[3,4]]),5,6)
+Expected:
+    None
+Got nothing
+**********************************************************************
+4 items had failures:
+   1 of   3 in __main__.logit_like_sum
+   1 of   3 in __main__.matrix_multiple
+   1 of   3 in __main__.ssr_loops
+   1 of   3 in __main__.ssr_vec
+***Test Failed*** 4 failures.
+TestResults(failed=4, attempted=12)
+#--------------------------------------------------
