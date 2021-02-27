@@ -39,6 +39,9 @@
 
 # import name_of_module
 
+import numpy as np
+
+
 ##################################################
 # Function Definitions
 ##################################################
@@ -165,8 +168,25 @@ def ssr(y: list,x: list,beta_0: float,beta_1: float) -> float:
     return ssr
 
 # Exercise 6
+def min_ssr(y, x, beta_0_min, beta_0_max, beta_1_min, beta_1_max) -> float:
+    """ Calculates the sum of squared residuals for the linear
+    regression model.
+    
+    min_ssr([1,2,3,4],[4,5,6,50],0.5,100,0.5,6)
+    
+    """
+    beta_0_list = list(np.arange(beta_0_min,beta_0_max,0.5))
+    beta_1_list = list(np.arange(beta_0_min,beta_0_max,0.5))
 
-
+    min_ssr = 999999
+    for i in range(len(beta_0_list)):
+        for j in range(len(beta_1_list)):
+            ssr_i = ssr(y, x, beta_0_list[i], beta_1_list[j])
+            if ssr_i < min_ssr:
+                min_ssr = ssr_i
+                beta = [i,j]
+                
+    return beta
 
 # Only function definitions above this point. 
 
