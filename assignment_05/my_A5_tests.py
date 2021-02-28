@@ -4,9 +4,9 @@
 #
 # ECP 3004: Python for Business Analytics
 #
-# Name: 
+# Name: Songjie Yin
 #
-# Date:
+# Date: 2/27/2021
 # 
 ##################################################
 #
@@ -34,7 +34,7 @@ import doctest
 # Find out the current directory.
 os.getcwd()
 # Change to a new directory.
-os.chdir('C:\\Users\\user_name\\path\\to\\your\\repo\\assignment_04')
+os.chdir('C:\\Users\\kelvi\\OneDrive\\Documents\\GitHub\\SongjieYin-ECP3004S21\\assignment_05')
 # Check that the change was successful.
 os.getcwd()
 

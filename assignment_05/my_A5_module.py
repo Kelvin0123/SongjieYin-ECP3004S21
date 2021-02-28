@@ -4,9 +4,9 @@
 #
 # ECP 3004: Python for Business Analytics
 #
-# Name: 
+# Name: Songjie Yin
 #
-# Date:
+# Date: 2/27/2021
 # 
 ##################################################
 #
@@ -113,7 +113,7 @@ def ols_slope(y: list,x: list) -> float:
     1.0
     >>> ols_slope([2,4,6,8,10],[1,3,5,7,9])
     1.0
-    >>> ols_slope()
+    >>> ols_slope([0,2.3,4,5.5],[2.2,2.5,3,10])
     0.49165020650026936
     """
     cov = 0
@@ -162,7 +162,7 @@ def ssr(y: list,x: list,beta_0: float,beta_1: float) -> float:
     >>> ssr([3,0,3],[0,2,2],1.0,0.5)
     9.0
     >>> ssr([1,2,3],[4,5,6],7,8)
-    6173.0
+    6173
     
     """
     ssr = 0
@@ -177,11 +177,11 @@ def min_ssr(y, x, beta_0_min, beta_0_max, beta_1_min, beta_1_max) -> float:
     """ Calculates the sum of squared residuals for the linear
     regression model.
     
-    >>> min_ssr([2,4,6,8,10],[1,3,5,7,9],-5,10,-5,10)
+    >>> min_ssr([2,4,6,8,10],[1,3,5,7,9],-1,2,-1,2)
     [1.0, 1.0]
-    >>> min_ssr([1,2,3],[4,5,6],-5,10,-5,10)
+    >>> min_ssr([1,2,3],[4,5,6],-4,2,-4,2)
     [-3.0, 1.0]
-    >>> min_ssr([0,2.3,4,5.5],[2.2,2.5,3,10],-5,5,-5,5)
+    >>> min_ssr([0,2.3,4,5.5],[2.2,2.5,3,10],-1,1,-1,1)
     [0.7744478362363085, 0.49165020650026936]
     """
     beta_0_list = list(np.arange(beta_0_min,beta_0_max,0.01))
