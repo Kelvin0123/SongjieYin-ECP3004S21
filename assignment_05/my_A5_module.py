@@ -173,7 +173,7 @@ def ssr(y: list,x: list,beta_0: float,beta_1: float) -> float:
     return ssr
 
 # Exercise 6
-def min_ssr(y, x, beta_0_min, beta_0_max, beta_1_min, beta_1_max) -> float:
+def min_ssr(y, x, beta_0_min, beta_0_max, beta_1_min, beta_1_max, step) -> float:
     """ Calculates the sum of squared residuals for the linear
     regression model.
     
@@ -184,8 +184,8 @@ def min_ssr(y, x, beta_0_min, beta_0_max, beta_1_min, beta_1_max) -> float:
     >>> min_ssr([0,2.3,4,5.5],[2.2,2.5,3,10],-1,1,-1,1)
     [0.7744478362363085, 0.49165020650026936]
     """
-    beta_0_list = list(np.arange(beta_0_min,beta_0_max,0.01))
-    beta_1_list = list(np.arange(beta_0_min,beta_0_max,0.01))
+    beta_0_list = list(np.arange(beta_0_min,beta_0_max,step))
+    beta_1_list = list(np.arange(beta_1_min,beta_1_max,step))
 
     min_ssr = 999999
     for i in range(len(beta_0_list)):
