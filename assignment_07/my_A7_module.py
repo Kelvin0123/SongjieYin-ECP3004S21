@@ -53,17 +53,24 @@ def g(x):
     """
     """
     
-    func = (x-2)*x*(x+2)**2
-    return func
+    return (x-2)*x*(x+2)**2
 
 def g_prime(x):
-    return
+    """
+    """
+    
+    return 2(x+2)(2*x**2-x-2)
 
 def g_2prime(x):
-    return
+    """
+    """
+    
+    return 12*x**2+12*x-8
 
 # Exercise 2
 
+def newton_g_opt(x_0,maxiter,tol):
+    return
 
 
 
