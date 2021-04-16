@@ -69,7 +69,7 @@ def in_budget(x: float, y: float,p_x: float, p_y: float,w: float) -> bool:
     """
     exp = x*p_x + y*p_y
     
-    if exp <= w:
+    if exp < w:
         return True
     else:
         return False
@@ -223,10 +223,8 @@ def two_loop_bundle(p_x,p_y,w,alpha,step) -> list:
            y = y_star_list[j]
 
            util = util_in_budget(x, y, p_x, p_y, w, alpha)
-           
-           in_budget_ij = in_budget(x, y, p_x, p_y, w)
 
-           if max_util < util and in_budget_ij:
+           if max_util < util:
                
                max_util = util
         

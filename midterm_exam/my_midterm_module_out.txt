@@ -1,0 +1,46 @@
+**********************************************************************
+File "my_midterm_module.py", line 87, in __main__.calc_bundle
+Failed example:
+    calc_bundle(10, 20, 120, 1.0/3.0)
+Expected:
+    [4.0, 4.0]
+Got:
+    [4.0, 4.000000000000001]
+**********************************************************************
+File "my_midterm_module.py", line 137, in __main__.one_loop_bundle
+Failed example:
+    one_loop_bundle(5, 10, 100, 0.25, 0.01)
+Expected:
+    answer_you_expect
+Got:
+    [5.0, 7.5]
+**********************************************************************
+File "my_midterm_module.py", line 139, in __main__.one_loop_bundle
+Failed example:
+    one_loop_bundle(5, 10, 100, 0.25, 0.01)
+Expected:
+    answer_you_expect
+Got:
+    [5.0, 7.5]
+**********************************************************************
+File "my_midterm_module.py", line 207, in __main__.two_loop_bundle
+Failed example:
+    two_loop_bundle(10, 25, 100, 0.5, 0.01)
+Expected:
+    [5.0, 2.0]
+Got:
+    [9.99, 3.99]
+**********************************************************************
+File "my_midterm_module.py", line 180, in __main__.util_in_budget
+Failed example:
+    util_in_budget(0, 0, 0, 0, 0, 4)
+Expected:
+    None
+Got nothing
+**********************************************************************
+4 items had failures:
+   1 of   3 in __main__.calc_bundle
+   2 of   3 in __main__.one_loop_bundle
+   1 of   1 in __main__.two_loop_bundle
+   1 of   3 in __main__.util_in_budget
+***Test Failed*** 5 failures.
