@@ -67,8 +67,8 @@ from scipy.optimize import minimize
 # Find out the current directory.
 os.getcwd()
 # Change to a new directory.
-git_path = 'C:\\Users\\le279259\\Documents\\Teaching\\ECP3004_Spring_2021\\GitRepo\\ECP3004S21\\'
-os.chdir(git_path + 'demo_19_Classification')
+git_path = 'C:\\Users\\kelvi\\OneDrive\\Documents\\GitHub\\SongjieYin-ECP3004S21\\'
+os.chdir(git_path + 'assignment_07')
 # Check that the change was successful.
 os.getcwd()
 
@@ -209,7 +209,7 @@ beta_0 = np.zeros(len(logit_model_fit_sm.params))
 # Code goes here:
 #--------------------------------------------------
 
-soln_nm = None
+soln_nm = minimize(logit_likelihood, beta_0, args=(y,X), method='Nelder-Mead', options={'xtol':1e-8, 'maxiter':2000, 'disp':True})
 
 #--------------------------------------------------
 #--------------------------------------------------
@@ -238,7 +238,7 @@ beta_0 = np.zeros(len(logit_model_fit_sm.params))
 # Code goes here:
 #--------------------------------------------------
 
-soln_dfp = None
+soln_dfp = minimize(logit_likelihood, beta_0, args=(y,X), method='Powell', options={'xtol':1e-8, 'maxiter':2000, 'disp':True})
 #--------------------------------------------------
 #--------------------------------------------------
 
@@ -269,7 +269,7 @@ beta_0 = np.zeros(len(logit_model_fit_sm.params))
 # Code goes here:
 #--------------------------------------------------
 
-soln_bfgs = None
+soln_bfgs = minimize(logit_likelihood, beta_0, args=(y,X), method='BFGS', options={'xtol':1e-8, 'maxiter':2000, 'disp':True})
 
 #--------------------------------------------------
 #--------------------------------------------------
@@ -303,7 +303,7 @@ beta_0 = np.zeros(len(logit_model_fit_sm.params))
 # Code goes here:
 #--------------------------------------------------
 
-soln_bfgs_jac = None
+soln_bfgs_jac = minimize(logit_likelihood, beta_0, args=(y,X), method='BFGS', jac=logit_gradient, options={'xtol':1e-8, 'maxiter':2000, 'disp':True})
 
 #--------------------------------------------------
 #--------------------------------------------------
@@ -363,7 +363,7 @@ def logit_hessian(beta, y, X):
 #--------------------------------------------------
 
 
-soln_ncg_hess = None
+soln_ncg_hess = minimize(logit_likelihood, beta_0, args=(y,X), method='Newton-CG', jac=logit_gradient, hess=logit_hessian, options={'xtol':1e-8, 'maxiter':2000, 'disp':True})
 
 #--------------------------------------------------
 #--------------------------------------------------
