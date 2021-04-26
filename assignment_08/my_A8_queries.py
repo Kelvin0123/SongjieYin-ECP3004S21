@@ -44,9 +44,11 @@ table_file = open("US_state_pop_area.csv")
 rows = csv.reader(table_file)
 cur.executemany("INSERT INTO Density VALUES (?, ?, ?)",rows)
 
-cur.execute('DELETE TOP(1) FROM Density')
-for row in cur.fetchall():
-    print(row)
+# Delete the header imported from the CSV file
+
+cur.execute('DELETE FROM Density WHERE State = (SELECT max(State) FROM Density)')
+
+#
 
 con.commit()
 
@@ -110,6 +112,13 @@ table_file = open("US_cap_cities_pop.csv")
 rows = csv.reader(table_file)
 cur.executemany("INSERT INTO Capitals VALUES (?, ?, ?, ?)",rows)
 
+
+# Delete the header imported from the CSV file
+
+cur.execute('DELETE FROM Capitals WHERE State = (SELECT max(State) FROM Capitals)')
+
+#
+
 cur.execute('SELECT * FROM Capitals')
 for row in cur.fetchall():
     print(row)
@@ -126,7 +135,7 @@ for row in cur.fetchall():
 # greater than 100,000.
 
 cur.execute('SELECT Density.area FROM Density INNER JOIN Capitals\
-    ON Density.state = Capitals.State WHERE Capitals.Population > 100000')
+            ON Density.state = Capitals.State WHERE Capitals.Population > 100000')
 for row in cur.fetchall():
     print(row)
 
@@ -134,8 +143,8 @@ for row in cur.fetchall():
 # square mile and capital city populations more than 500,000.
 
 cur.execute('SELECT Capitals.State FROM Capitals INNER JOIN Density\
-    ON Density.state = Capitals.State WHERE Density.population/Density.area > 10\
-    AND Capitals.Population > 500000')
+            ON Density.state = Capitals.State WHERE\
+            Density.population/Density.area > 10AND Capitals.Population > 500000')
 for row in cur.fetchall():
     print(row)
 
@@ -164,8 +173,8 @@ print(cur.fetchone())
 # square mile of one another. Have each pair of states reported only once.
 
 cur.execute('SELECT Density.state, Density.population, Capitals.Population\
-        FROM Density LEFT JOIN Capitals ON Density.state = Capitals.State\
-        WHERE Capitals.State IS NULL')
+            FROM Density LEFT JOIN Capitals ON Density.state = Capitals.State\
+            WHERE Capitals.State IS NULL')
 for row in cur.fetchall():
     print(row)
 
@@ -175,8 +184,8 @@ for row in cur.fetchall():
 # i) List only the rows corresponding to states but not territories.
 
 cur.execute('SELECT Density.state, Density.population, Capitals.Population\
-               FROM Density LEFT JOIN Capitals ON Density.state = Capitals.State\
-               WHERE Capitals.State IS NULL')
+             FROM Density LEFT JOIN Capitals ON Density.state = Capitals.State\
+             WHERE Capitals.State IS NULL')
 for row in cur.fetchall():
     print(row)
 
@@ -184,6 +193,6 @@ for row in cur.fetchall():
 # missing values as None.
 
 cur.execute('SELECT Density.state, Density.population, Capitals.Population\
-               FROM Density INNER JOIN Capitals ON Density.state = Capitals.State')
+             FROM Density INNER JOIN Capitals ON Density.state = Capitals.State')
 for row in cur.fetchall():
     print(row)
