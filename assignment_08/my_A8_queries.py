@@ -8,13 +8,9 @@ Created on Sun Apr 25 18:01:14 2021
 ##################################################
 # Import Modules.
 ##################################################
-
 import os
-
 import sqlite3
-
 import csv
-
 ##################################################
 # Set Working Directory.
 ##################################################
@@ -126,8 +122,8 @@ for row in cur.fetchall():
 # b) Retrieve the populations of the states and capitals (in a list of tuples 
 # of the form [state population,capital population]).
 
-cur.execute('''SELECT Density.population, Capitals.Population FROM Density INNER 
-            JOIN Capitals WHERE Density.state = Capitals.State''')
+cur.execute('''SELECT Density.population, Capitals.Population FROM Capitals INNER 
+            JOIN Density WHERE Capitals.State = Density.State''')
 for row in cur.fetchall():
     print(row)
 
@@ -144,7 +140,7 @@ for row in cur.fetchall():
 
 cur.execute('SELECT Capitals.State FROM Capitals INNER JOIN Density\
             ON Density.state = Capitals.State WHERE\
-            Density.population/Density.area > 10AND Capitals.Population > 500000')
+            Density.population/Density.area > 10 AND Capitals.Population > 500000')
 for row in cur.fetchall():
     print(row)
 
@@ -184,8 +180,7 @@ for row in cur.fetchall():
 # i) List only the rows corresponding to states but not territories.
 
 cur.execute('SELECT Density.state, Density.population, Capitals.Population\
-             FROM Density LEFT JOIN Capitals ON Density.state = Capitals.State\
-             WHERE Capitals.State IS NULL')
+             FROM Density INNER JOIN Capitals ON Density.state = Capitals.State')
 for row in cur.fetchall():
     print(row)
 
@@ -193,6 +188,7 @@ for row in cur.fetchall():
 # missing values as None.
 
 cur.execute('SELECT Density.state, Density.population, Capitals.Population\
-             FROM Density INNER JOIN Capitals ON Density.state = Capitals.State')
+             FROM Density LEFT JOIN Capitals ON Density.state = Capitals.State\
+             WHERE Capitals.State IS NULL')
 for row in cur.fetchall():
     print(row)
