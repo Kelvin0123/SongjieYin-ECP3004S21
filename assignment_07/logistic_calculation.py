@@ -271,6 +271,13 @@ beta_0 = np.zeros(len(logit_model_fit_sm.params))
 
 soln_bfgs = minimize(logit_likelihood, beta_0, args=(y,X), method='BFGS', options={'xtol':1e-8, 'maxiter':2000, 'disp':True})
 
+# Notice the warning:
+# <ipython-input-39-417bef5f70df>:1: OptimizeWarning: Unknown solver options: xtol
+#   soln_bfgs = minimize(logit_likelihood, beta_0, args=(y,X), method='BFGS', options={'xtol':1e-8, 'maxiter':2000, 'disp':True})
+
+# Not all algorithms have the same arguments.
+# But at least it worked.
+
 #--------------------------------------------------
 #--------------------------------------------------
 

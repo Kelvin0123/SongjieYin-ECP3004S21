@@ -109,12 +109,18 @@ def newton_g_opt(x_0: float,maxiter: int,tol: float) -> float:
     x = x_0
     for i in range(maxiter):
         x_next = x - (g_prime(x)/g_2prime(x))
-        if (x_next - x) < tol:
-            return g(x_next)
+        # if (x_next - x) < tol:
+        if abs(x_next - x) < tol:
+            # It is also acceptable to return g(x)
+            # return g(x_next)
+            # But my examples compare with x.
+            return x_next
         x = x_next
-    if i == maxiter - 1 and x_next - x < tol:
+    # if i == maxiter - 1 and x_next - x < tol:
+    if i == maxiter - 1 and abs(x_next - x) > tol:
         
-        return g(x)
+        # return g(x)
+        return x
 
 # Only function definitions above this point. 
 
