@@ -168,6 +168,8 @@ print(cur.fetchone())
 # i) Retrieve the states that have land densities within 0.5 persons per 
 # square mile of one another. Have each pair of states reported only once.
 
+# This requires a self join: 
+
 cur.execute('SELECT Density.state, Density.population, Capitals.Population\
             FROM Density LEFT JOIN Capitals ON Density.state = Capitals.State\
             WHERE Capitals.State IS NULL')
@@ -192,3 +194,5 @@ cur.execute('SELECT Density.state, Density.population, Capitals.Population\
              WHERE Capitals.State IS NULL')
 for row in cur.fetchall():
     print(row)
+
+# This is perfectly correct for 2j. Good work. 
